@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="main.css") }}">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Docker Container Status</h1>
+        <div class="cntrs">
+            {% for cntr in cntrs %}
+            <div class="cntr">
+                <div class="cntr_data">
+                    <div class="label">Container</div>
+                    <div class="value">{{ cntr.name }}</div>
+                </div>
+                <div class="cntr_data">
+                    <div class="label">Image</div>
+                    <div class="value">{{ cntr.image }}</div>
+                </div>
+                <div class="cntr_data">
+                    <div class="label">Status</div>
+                    <div class="value">{{ cntr.status }}</div>
+                </div>
+                <div class="cntr_data">
+                    <div class="label">IP Address</div>
+                    <div class="value">{{ cntr.ip }}</div>
+                </div>
+                <div class="cntr_data">
+                    <div class="label">Gateway</div>
+                    <div class="value">{{ cntr.gateway }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

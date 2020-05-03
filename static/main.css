@@ -1,0 +1,43 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cntrs {
+    display: flex;
+    flex-direction: row;    
+    border-style: solid;
+    flex-wrap: wrap;
+}
+
+.cntr {
+    background: rgba(145, 255, 0, 0.5);
+    margin: 10px;    
+    padding: 10px;
+    border: green;
+    border-style: solid;
+    border-radius: 10%;    
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cntr_data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cntr_data > .label {
+    margin: 2px;
+    padding: 2px;
+    background: rgba(0, 255, 157, 0.5);
+    font-size: x-large;
+}
+
+.cntr_data > .value {    
+    margin: 2px;
+    padding: 2px;
+    background: rgba(0, 255, 255, 0.5);    
+    font-size: x-large;
+}
